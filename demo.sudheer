@@ -1,0 +1,41 @@
+public class Matrimony 
+{
+   public void initiate()
+   {
+	   Applicant applicant =new Applicant();
+	   try
+	   {
+	   applicant.takeInput();
+	   applicant.verify();
+	   }
+	   catch(Exception e)
+	   {
+		   System.out.println("Invalid age kindly neter the valid age");
+		   System.out.println("Try Again!");
+		   System.out.println("You have 2 chances left");
+		   try
+		   {
+			   applicant.takeInput();
+			   applicant.verify();
+		   }
+		   catch(Exception e1)
+		   {
+			   System.out.println("Invalid age kindly neter the valid age");
+			   System.out.println("Try Again!");
+			   System.out.println("You have 1 chances left");
+			   try
+			   {
+				   applicant.takeInput();
+				   applicant.verify();
+			   }
+			   catch(Exception e2)
+			   {
+				   System.out.println("Invalid age ");
+				   System.out.println("You have 0 chances left");
+				   System.out.println("Your account blocked");
+				   
+			   }
+		   }
+	   }
+   }
+   
